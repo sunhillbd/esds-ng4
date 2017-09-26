@@ -1,5 +1,10 @@
 # EsdsNg4
 
+1. clone the repo.
+2. npm/yarn install.
+3. ng serve.
+4. http://localhost:4200/ shoul take you to the app.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.3.
 
 ## Development server
