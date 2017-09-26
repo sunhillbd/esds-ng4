@@ -1,20 +1,86 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{title}}!
-  </h1>
-  <img width="300" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<div class="container-fluid">
+  <div class="row" >
+    <div class="col-md-6 ">
+      <div class="filter-border">
+            <h3 class="hr-gap" >Results</h3>
+        <div class="filter-input" id="container"
+             style="height: 400px; min-width: 310px; max-width: 800px; margin: 0 auto;  ">
+        </div>
+      </div>
+    </div>
 
+    <div class="col-md-6" >
+      <div class="filter-border">
+
+          <h3 class="hr-gap">Filter</h3>
+
+      <form class="filter-input">
+        <div  class="form-group text-color">
+        <input checked type="radio" name="location" id="location1" /><label for="location1"></label>
+        Show Top 10 Locations
+      </div>
+        <div class="form-group text-color" >
+        <input type="radio" name="location" id="location2" /><label for="location2"></label>
+        Select Specific Locations:
+      </div>
+        <div class="form-group">
+            <select name="location[]" id="select-location" class="text-color select-filter select-multiple"  multiple="multiple">
+          <option value="1" >Bangalore</option>
+          <option value="2">Delhi</option>
+          <option value="3">Mumbai</option>
+        </select>
+            <button type="button" class="btn-select" id="btn-location">
+          <i class="fa fa-caret-down" aria-hidden="true"></i>
+        </button>
+      </div>
+
+        <div class="form-group ">
+            <select name="indicator[]" id="select-indicator" class="text-color select-filter select-multiple" multiple="multiple">
+          <option value="1" >External</option>
+          <option value="2">Large Attachments</option>
+          <option value="3">Personal Emails</option>
+          <option value="4">Suspicious Language(External)</option>
+          <option value="5">Suspicious Language(Internal)</option>
+          <option value="6">External BCC</option>
+          <option value="7">Forwarded Emails</option>
+          <option value="8">Total</option>
+        </select>
+            <button type="button" class="btn-select" id="btn-indicator">
+          <i class="fa fa-caret-down" aria-hidden="true"></i>
+        </button>
+      </div>
+
+        <div class="row">
+          <div class="btn-group pull-right-custom">
+            <button type="reset"  class="btn-filter">
+              Reset
+            </button>
+            <button type="button" class="btn-filter">
+              Filter
+            </button>
+          </div>
+        </div>
+
+
+        <div class="row">
+          <div class="btn-group mgn-export pull-right-custom">
+            <button type="button" class="btn-export">Export Data</button>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="btn-group  mgn-export pull-right-custom">
+            <button type="button"  class="btn-export">Export Graph</button>
+          </div>
+        </div>
+
+
+      </form>
+
+    </div>
+
+
+
+    </div>
+  </div>
+</div>
